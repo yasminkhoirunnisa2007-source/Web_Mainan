@@ -1,181 +1,227 @@
 <html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toko Kado Mama</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Toko Kado Mama">
-        <span>Toko Kado Mama</span>
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Kado Mama</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-label="Buka menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<body>
 
-      <nav class="site-nav" aria-label="Navigasi utama">
-        <a href="index.html">Home</a>
-        <a href="About.html">About us</a>
-        <a href="Katalog.html">Katalog Produk</a>
-        <a href="Promo.html">Promo</a>
-        <a href="#kontak.html">Kontak</a>
+  <!-- ================================
+       1. Header & Navigasi
+  ================================ -->
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="Toko Kado Mama">
+      <span>Toko Kado Mama</span>
+    </a>
 
-      </nav>
-    </header>
+    <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <main>
-      <section id="beranda" class="hero">
-        <div
-          class="hero-media"
-          role="img"
-          aria-label="Foto Toko Kado Mama"
-        ></div>
+    <nav class="site-nav" aria-label="Navigasi utama">
+      <a href="#beranda">Home</a>
+      <a href="#tentang">About us</a>
+      <a href="#produk-unggulan">Katalog Produk</a>
+      <a href="#promo">Promo</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
 
-        <div class="hero-content">
-                   <h1>Toko Kado mama</h1>
+  <main>
 
-          <p class="hero-copy">
-            Mainan edukatif, kreatif, dan aman untuk menemani anak belajar lewat
-            rasa ingin tahu.
-          </p>
+    <!-- ================================
+         2. Hero (Beranda)
+    ================================ -->
+    <section id="beranda" class="hero">
+      <div class="hero-media" role="img" aria-label="Foto Toko Kado Mama"></div>
 
-          <div class="hero-actions">
-            <a class="button secondary" href="Katalog.html"> Lihat Katalog </a>
-          </div>
-        </div>
-      </section>
+      <div class="hero-content">
+        <h1>Toko Kado Mama</h1>
 
-      <section id="produk-unggulan" class="product-section">
-        <div class="product-header">
-          <h2>Produk Unggulan Kami</h2>
-          <p>Pilihan mainan terbaik untuk mendukung kreativitas, logika, dan perkembangan motorik si kecil.</p>
-        </div>
-
-        <div class="product-grid">
-          <div class="product-card">
-            <div class="product-image-placeholder">🧩</div>
-            <div class="product-info">
-              <h3>Jeep rc hrg</h3>
-              <p>Siap trabas rintangan dengan RC Climbing Cart dari Kapten Toys!
-                Desain kokoh ala mobil offroad dengan suspensi tangguh dan ban karet bermotif deep tread yang siap melibas medan kasar.
-                Sangat cocok untuk melatih ketangkasan dan motorik anak.</p>
-              <span class="product-price">Rp 145.000</span>
-              <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Puzzle%20Kayu%20Abjad%20dan%20Angka" target="_blank" class="button primary small">Pesan Sekarang</a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-info">
-            <div class="product-image-placeholder">🪵</div>
-              <h3>Mobil polisi</h3>
-              <p>Latih imajinasi dan ketangkasan anak dengan Mobil RC Polisi yang keren ini!
-                Didesain menyerupai mobil patroli polisi sungguhan dengan bodi yang sporty dan tangguh. 
-                Sangat cocok untuk hadiah ulang tahun atau pelengkap koleksi mainan anak.</p>
-              <span class="product-price">Rp 55.000</span>
-              <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Balok%20Susun%20Kreatif" target="_blank" class="button primary small">Pesan Sekarang</a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-placeholder">🎨</div>
-            <div class="product-info">
-              <h3>Dokter Set</h3>
-              <p>Ajak si kecil bermain peran menjadi dokter kecil yang cerdas dengan set mainan medis ini!
-                Dilengkapi dengan kotak penyimpanan (box) yang praktis, mainan ini membantu melatih kreativitas, empati, serta merapikan mainan sendiri setelah selesai digunakan.</p>
-              <span class="product-price">Rp 45.000</span>
-              <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Mainan%20Pasir%20Kinetik" target="_blank" class="button primary small">Pesan Sekarang</a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-placeholder">🧮</div>
-            <div class="product-info">
-              <h3>Truk Derek</h3>
-              <p>Mobil Mogok? Tenang, Truk Derek Siap Meluncur!
-                Bawa keseruan aksi penyelamatan jalan raya ke rumah Anda! 
-                Mainan truk derek mekanis ini dirancang seru untuk memicu daya imajinasi, kreativitas, dan koordinasi motorik si kecil saat bermain peran.</p>
-              <span class="product-price">Rp 35.000</span>
-              <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Sempoa%20Berhitung" target="_blank" class="button primary small">Pesan Sekarang</a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-image-placeholder">🧪</div>
-            <div class="product-info">
-              <h3>Jumping Animal</h3>
-              <p>Teman Lompat yang Seru untuk Si Kecil yang Aktif!
-                Salurkan energi ceria si kecil dengan mainan hewan tunggang karet yang menggemaskan ini!
-                Dirancang khusus untuk memicu keseimbangan tubuh, melatih otot kaki, dan koordinasi motorik anak lewat cara yang super seru.</p>
-              <span class="product-price">Rp 120.000</span>
-              <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik" target="_blank" class="button primary small">Pesan Sekarang</a>
-            </div>
-          </div>
-
-          div class="product-card">
-            <div class="product-image-placeholder">🧪</div>
-            <div class="product-info">
-              <h3>Science Kit Eksperimen Cilik</h3>
-              <p>Mobil Mogok? Tenang, Truk Derek Siap Meluncur!
-                Bawa keseruan aksi penyelamatan jalan raya ke rumah Anda! 
-                Mainan truk derek mekanis ini dirancang seru untuk memicu daya imajinasi, kreativitas, dan koordinasi motorik si kecil saat bermain peran.</p>
-              <span class="product-price">Rp 120.000</span>
-              <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik" target="_blank" class="button primary small">Pesan Sekarang</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="tentang" class="about-section">
-        <h2>Tentang Toko Kado Mama</h2>
-        <p>
-          Berdiri sejak tahun 2013, Toko Kado Mama berkomitmen menyediakan pusat 
-          mainan eceran yang edukatif, kreatif, dan aman untuk anak-anak. Kami 
-          percaya bahwa belajar paling efektif adalah melalui bermain dan rasa ingin tahu.
+        <p class="hero-copy">
+          Mainan edukatif, kreatif, dan aman untuk menemani anak belajar lewat
+          rasa ingin tahu.
         </p>
-      </section>
 
-      <section id="kontak" class="contact-section">
-        <div class="contact-header">
-          <h2>Hubungi Kami</h2>
-          <p>Punya pertanyaan atau ingin memesan langsung? Silakan hubungi kami melalui:</p>
+        <div class="hero-actions">
+          <a class="button secondary" href="#produk-unggulan">Lihat Katalog</a>
         </div>
-        
-        <div class="contact-grid">
-  <div class="contact-card address">
-    <span class="contact-icon">📍</span>
-    <h3>Alamat</h3>
-    <p><a href="https://maps.app.goo.gl/E6sVrRvzsPZavSBq9?g_st=aw" target="_blank" class="link">Km Pusat Mainan, Jatisari, Kec. Jatiasih, Kota Bks, Jawa Barat</a></p>
-  </div>
-  
-  <div class="contact-card hours">
-    <span class="contact-icon">⏰</span>
-    <h3>Jam Operasional</h3>
-    <p>Everyday (08.00 - 17.00 WIB)</p>
-  </div>
-    
- <div class="contact-card whatsapp">
-    <span class="contact-icon">💬</span>
-    <h3>WhatsApp</h3>
-    <p><a href="https://wa.me/6281284319171" target="_blank" class="link">0812-8431-9171</a></p>
-  </div>
-</div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 Toko Kado Mama. Semua Hak Cipta Dilindungi.</p>
-    </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- ================================
+         3. Produk Unggulan
+    ================================ -->
+    <section id="produk-unggulan" class="product-section">
+      <div class="product-header">
+        <h2>Produk Unggulan Kami</h2>
+        <p>Pilihan mainan terbaik untuk mendukung kreativitas, logika, dan perkembangan motorik si kecil.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Card 1: Jeep RC -->
+        <div class="product-card">
+          <div class="product-image-placeholder">🧩</div>
+          <div class="product-info">
+            <h3>Jeep rc hrg</h3>
+            <p>Siap trabas rintangan dengan RC Climbing Cart dari Kapten Toys!
+              Desain kokoh ala mobil offroad dengan suspensi tangguh dan ban karet bermotif deep tread yang siap melibas
+              medan kasar. Sangat cocok untuk melatih ketangkasan dan motorik anak.</p>
+            <span class="product-price">Rp 145.000</span>
+            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Puzzle%20Kayu%20Abjad%20dan%20Angka"
+              target="_blank" class="button primary small">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Mobil Polisi -->
+        <div class="product-card">
+          <div class="product-image-placeholder">🪵</div>
+          <div class="product-info">
+            <h3>Mobil polisi</h3>
+            <p>Latih imajinasi dan ketangkasan anak dengan Mobil RC Polisi yang keren ini!
+              Didesain menyerupai mobil patroli polisi sungguhan dengan bodi yang sporty dan tangguh.
+              Sangat cocok untuk hadiah ulang tahun atau pelengkap koleksi mainan anak.</p>
+            <span class="product-price">Rp 55.000</span>
+            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Balok%20Susun%20Kreatif"
+              target="_blank" class="button primary small">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Dokter Set -->
+        <div class="product-card">
+          <div class="product-image-placeholder">🎨</div>
+          <div class="product-info">
+            <h3>Dokter Set</h3>
+            <p>Ajak si kecil bermain peran menjadi dokter kecil yang cerdas dengan set mainan medis ini!
+              Dilengkapi dengan kotak penyimpanan (box) yang praktis, mainan ini membantu melatih kreativitas, empati,
+              serta merapikan mainan sendiri setelah selesai digunakan.</p>
+            <span class="product-price">Rp 45.000</span>
+            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Mainan%20Pasir%20Kinetik"
+              target="_blank" class="button primary small">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Truk Derek -->
+        <div class="product-card">
+          <div class="product-image-placeholder">🧮</div>
+          <div class="product-info">
+            <h3>Truk Derek</h3>
+            <p>Mobil Mogok? Tenang, Truk Derek Siap Meluncur!
+              Bawa keseruan aksi penyelamatan jalan raya ke rumah Anda!
+              Mainan truk derek mekanis ini dirancang seru untuk memicu daya imajinasi, kreativitas, dan koordinasi
+              motorik si kecil saat bermain peran.</p>
+            <span class="product-price">Rp 35.000</span>
+            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Sempoa%20Berhitung"
+              target="_blank" class="button primary small">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Jumping Animal -->
+        <div class="product-card">
+          <div class="product-image-placeholder">🧪</div>
+          <div class="product-info">
+            <h3>Jumping Animal</h3>
+            <p>Teman Lompat yang Seru untuk Si Kecil yang Aktif!
+              Salurkan energi ceria si kecil dengan mainan hewan tunggang karet yang menggemaskan ini!
+              Dirancang khusus untuk memicu keseimbangan tubuh, melatih otot kaki, dan koordinasi motorik anak lewat
+              cara yang super seru.</p>
+            <span class="product-price">Rp 120.000</span>
+            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Jumping%20Animal"
+              target="_blank" class="button primary small">Pesan Sekarang</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Science Kit -->
+        <!-- TODO: ganti deskripsi, masih sama dengan Truk Derek -->
+        <div class="product-card">
+          <div class="product-image-placeholder">🧪</div>
+          <div class="product-info">
+            <h3>Science Kit Eksperimen Cilik</h3>
+            <p>Mobil Mogok? Tenang, Truk Derek Siap Meluncur!
+              Bawa keseruan aksi penyelamatan jalan raya ke rumah Anda!
+              Mainan truk derek mekanis ini dirancang seru untuk memicu daya imajinasi, kreativitas, dan koordinasi
+              motorik si kecil saat bermain peran.</p>
+            <span class="product-price">Rp 120.000</span>
+            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
+              target="_blank" class="button primary small">Pesan Sekarang</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================
+         4. Promo
+         TODO: section belum dibuat
+    ================================ -->
+    <section id="promo" class="promo-section">
+    </section>
+
+
+    <!-- ================================
+         5. Tentang Toko
+    ================================ -->
+    <section id="tentang" class="about-section">
+      <h2>Tentang Toko Kado Mama</h2>
+      <p>
+        Berdiri sejak tahun 2013, Toko Kado Mama berkomitmen menyediakan pusat
+        mainan eceran yang edukatif, kreatif, dan aman untuk anak-anak. Kami
+        percaya bahwa belajar paling efektif adalah melalui bermain dan rasa ingin tahu.
+      </p>
+    </section>
+
+
+    <!-- ================================
+         6. Kontak
+    ================================ -->
+    <section id="kontak" class="contact-section">
+      <div class="contact-header">
+        <h2>Hubungi Kami</h2>
+        <p>Punya pertanyaan atau ingin memesan langsung? Silakan hubungi kami melalui:</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card address">
+          <span class="contact-icon">📍</span>
+          <h3>Alamat</h3>
+          <p><a href="https://maps.app.goo.gl/E6sVrRvzsPZavSBq9?g_st=aw" target="_blank" class="link">Km Pusat Mainan,
+              Jatisari, Kec. Jatiasih, Kota Bks, Jawa Barat</a></p>
+        </div>
+
+        <div class="contact-card hours">
+          <span class="contact-icon">⏰</span>
+          <h3>Jam Operasional</h3>
+          <p>Everyday (08.00 - 17.00 WIB)</p>
+        </div>
+
+        <div class="contact-card whatsapp">
+          <span class="contact-icon">💬</span>
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/6281284319171" target="_blank" class="link">0812-8431-9171</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================================
+       7. Footer
+  ================================ -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Toko Kado Mama. Semua Hak Cipta Dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
