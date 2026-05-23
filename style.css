@@ -320,3 +320,107 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
+/* Container Utama Grid Produk */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Membagi menjadi 3 kolom sejajar sama rata */
+  gap: 25px; /* Jarak antar kartu mainan */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Product Card */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Menyusun konten dari atas ke bawah */
+  height: 100%; /* Memaksa semua kartu tingginya sama rata */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efek sedikit terangkat saat di-hover */
+}
+
+/* Pengaturan Kotak Foto */
+.product-image {
+  width: 100%;
+  height: 220px; /* Atur tinggi standar kotak foto */
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Membuat foto pas memenuhi kotak tanpa merusak rasio (tidak gepeng) */
+  display: block;
+}
+
+/* Area Informasi Produk (Teks, Harga, Tombol) */
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Membuat area teks mengisi sisa ruang kosong agar tombol berada di paling bawah */
+}
+
+.product-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-info p {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  flex-grow: 1; /* Mendorong harga dan tombol ke bawah jika teks deskripsi pendek */
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e65100; /* Warna harga dibuat menonjol */
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Pengaturan Tombol */
+.button.primary.small {
+  display: block;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #4DA6FF; /* Menggunakan warna solid utama */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.button.primary.small:hover {
+  background-color: #3393FF; /* Warna saat tombol disorot */
+}
+
+/* RESPONSIVE: Otomatis menyesuaikan jika dibuka di tablet atau HP */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Jadi 2 kolom di tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: minmax(0, 1fr); /* Jadi 1 kolom penuh di HP */
+    gap: 15px;
+    padding: 10px;
+  }
+}
