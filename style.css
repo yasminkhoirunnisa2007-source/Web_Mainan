@@ -1,65 +1,64 @@
 :root {
-  --ink: #17202a;
-  --muted: #667085;
-  --paper: #fffdf8;
-  --surface: #ffffff;
-  --sun: #ffd166;
-  --coral: #ef6f6c;
-  --mint: #51bfa5;
-  --line: #e9e2d6;
+  /* ==========================================================================
+     1. VARIABEL WARNA (CSS VARIABLES)
+     Berfungsi menyimpan warna agar bisa dipanggil berulang kali di baris bawah.
+     ========================================================================== */
+  --blue-light: #4DA6FF;   /* Biru Muda (Warna utama navbar & footer) */
+  --sun: #FFD93D;          /* Kuning (Warna tulisan hero & aksen hover kartu jam) */
+  --mint: #6BCB77;         /* Hijau Muda (Warna aksen hover kartu WhatsApp) */
+  --ink: #1C2A38;          /* Navy Gelap (Digunakan untuk warna teks utama) */
+  --muted: #566573;        /* Abu-abu/Navy pudar (Untuk teks sub-judul/keterangan) */
+  --paper: #F4F9FF;        /* Biru super muda (Untuk background dasar halaman web) */
+  --surface: #ffffff;      /* Putih bersih (Untuk background section/kartu tertentu) */
+  --line: #D4E6F1;         /* Garis pembatas tipis antar bagian web */
 }
 
+/* ==========================================================================
+   2. PENGATURAN DASAR GLOBAL (RESET & BASE STYLES)
+   ========================================================================== */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Memastikan padding & border tidak merusak ukuran elemen */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Membuat efek transisi bergeser halus saat link menu diklik */
 }
 
 body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui,
-    -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.6;
+  margin: 0; /* Menghilangkan jarak bawaan browser di tepi layar */
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; /* Jenis font web */
+  color: var(--ink); /* Warna teks default seluruh halaman */
+  background: var(--paper); /* Warna background default seluruh halaman */
+  line-height: 1.6; /* Mengatur jarak spasi antar baris kalimat teks */
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; /* Membuat warna link mengikuti warna teks induknya */
+  text-decoration: none; /* Menghilangkan garis bawah default pada link */
 }
 
-/* NAVBAR */
-
+/* ==========================================================================
+   3. MENU ATAS (NAVBAR STYLING)
+   ========================================================================== */
 .site-header {
-  position: sticky;
+  position: sticky; /* Membuat navbar tetap melayang/menempel di atas saat di-scroll */
   top: 0;
-  z-index: 20;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  min-height: 72px;
-  padding: 0 6vw;
-
-  background: rgba(255, 253, 248, 0.92);
-
-  border-bottom: 1px solid rgba(233, 226, 214, 0.9);
-
-  backdrop-filter: blur(16px);
+  z-index: 20; /* Memastikan posisi navbar berada di lapisan paling atas menimpa konten lain */
+  display: flex; /* Mengaktifkan mode flexbox untuk mengatur posisi item di dalam */
+  align-items: center; /* Membuat isi navbar sejajar secara vertikal di tengah */
+  justify-content: space-between; /* Mendorong logo ke kiri ujung dan teks menu ke kanan ujung */
+  min-height: 72px; /* Tinggi minimal dari bar navbar */
+  padding: 0 6vw; /* Jarak pas dalam di kiri dan kanan navbar */
+  background: #4DA6FF; /* Warna dasar navbar (Biru Muda) */
+  border-bottom: 1px solid var(--line); /* Garis pembatas tipis di bawah navbar */
+  backdrop-filter: blur(16px); /* Efek blur halus jika ada komponen di belakangnya */
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-
-  font-weight: 800;
+  gap: 10px; /* Jarak antara kotak logo mini dan tulisan "Toko Kado Mama" */
+  font-weight: 800; /* Menebalkan teks nama toko */
   font-size: 1.1rem;
 }
 
@@ -67,157 +66,258 @@ a {
   display: grid;
   width: 40px;
   height: 40px;
-
-  place-items: center;
-
-  color: #ffffff;
-  background: var(--coral);
-
-  border-radius: 8px;
-
-  box-shadow: 6px 6px 0 var(--sun);
+  place-items: center; /* Membuat teks/icon di dalam kotak logo tepat di tengah */
+  color: var(--ink); /* Warna teks/icon di dalam logo */
+  background: var(--sun); /* Warna kotak logo mini (Kuning) */
+  border-radius: 8px; /* Membuat sudut kotak logo agak melengkung bulat */
+  box-shadow: 4px 4px 0 rgba(28, 42, 56, 0.2); /* Efek bayangan pop-art transparan */
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
-
-  color: #344054;
+  gap: 28px; /* Jarak antar teks menu (Produk, Tentang, Kontak) */
+  color: #ffffff; /* Mengubah warna teks menu navbar menjadi putih */
   font-weight: 700;
 }
 
+.site-nav a {
+  transition: color 0.2s ease; /* Efek transisi halus perubahan warna saat disentuh kursor */
+}
+
 .site-nav a:hover {
-  color: var(--coral);
+  color: var(--sun); /* Teks menu berubah menjadi Kuning saat kursor menempel */
 }
 
 .nav-toggle {
-  display: none;
-
+  display: none; /* Disembunyikan (Akan muncul nanti lewat media query untuk mode HP) */
   width: 42px;
   height: 42px;
-
   border: 1px solid var(--line);
   border-radius: 8px;
-
   background: var(--surface);
 }
 
 .nav-toggle span {
   display: block;
-
   width: 18px;
   height: 2px;
-
   margin: 4px auto;
-
-  background: var(--ink);
+  background: var(--ink); /* Garis strip tiga untuk menu mobile */
 }
 
-/* HERO */
-
+/* ==========================================================================
+   4. BAGIAN BANNER UTAMA (HERO SECTION)
+   ========================================================================== */
 .hero {
   position: relative;
-
-  min-height: calc(100vh - 72px);
-
+  min-height: calc(65vh - 72px); /* Mengatur tinggi banner proporsional (65% layar) agar tidak terlalu besar */
   display: grid;
-  align-items: end;
-
+  align-items: end; /* Membuat konten teks di dalamnya merapat ke bagian bawah banner */
   overflow: hidden;
-
-  background: #14342f;
+  background: #4DA6FF;
 }
 
 .hero-media {
   position: absolute;
-  inset: 0;
-
+  inset: 0; /* Membuka gambar penuh menutupi area hero background */
+  /* Efek gradien gelap dari kiri ke kanan dikombinasikan dengan pemanggilan gambar fototoko.jpeg */
   background:
     linear-gradient(
       90deg,
-      rgba(20, 52, 47, 0.88) 0%,
-      rgba(20, 52, 47, 0.62) 44%,
-      rgba(20, 52, 47, 0.2) 100%
+      rgba(21, 43, 70, 0.8) 0%,   /* Sisi kiri agak gelap agar teks terbaca tajam */
+      rgba(21, 43, 70, 0.5) 50%,
+      rgba(21, 43, 70, 0.1) 100%  /* Sisi kanan transparan agar gambar asli toko terlihat jelas */
     ),
-
-    url("images/hero.jpg")
-    center / cover;
+    url("images/fototoko.jpeg") center / cover; /* Gambar otomatis otomatis memenuhi ruang */
 }
 
 .hero-content {
   position: relative;
-
-  width: min(760px, 88vw);
-
-  margin: 0 0 11vh 6vw;
-
+  width: min(760px, 88vw); /* Batas lebar teks agar tidak melar terlalu panjang ke kanan */
+  margin: 0 0 7vh 6vw; /* Jarak penempatan teks dari tepi bawah dan kiri banner */
   color: #ffffff;
 }
 
 .eyebrow {
   margin: 0 0 12px;
-
-  color: var(--sun);
-
+  color: #ffffff; /* Tulisan kecil di paling atas judul (Putih) */
   font-size: 0.78rem;
   font-weight: 900;
-
-  text-transform: uppercase;
-}
-
-h1,
-p {
-  margin-top: 0;
+  text-transform: uppercase; /* Membuat teks otomatis kapital semua */
 }
 
 h1 {
   margin-bottom: 16px;
-
-  font-size: clamp(3.2rem, 9vw, 7.6rem);
-
+  color: var(--sun); /* Mengubah Judul Utama "Toko Kado Mama" menjadi Kuning */
+  font-size: clamp(3.2rem, 9vw, 7.6rem); /* Ukuran teks otomatis membesar/mengecil sesuai lebar device */
   line-height: 0.92;
 }
 
 .hero-copy {
   max-width: 620px;
-
   margin-bottom: 28px;
-
+  color: rgba(255, 217, 61, 0.9); /* Mengubah teks deskripsi di bawah judul menjadi Kuning lembut */
   font-size: clamp(1.05rem, 2vw, 1.35rem);
-
-  color: rgba(255, 255, 255, 0.88);
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 12px;
-
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Jika tombol tidak muat di layar kecil, otomatis melipat ke bawah */
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 48px;
   padding: 0 22px;
-
   border: 2px solid transparent;
   border-radius: 8px;
-
   font-weight: 900;
-}
-
-.button.primary {
-  color: #17202a;
-  background: var(--sun);
+  transition: all 0.2s ease;
 }
 
 .button.secondary {
-  color: #ffffff;
-
-  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff; /* Warna teks tombol "Lihat Katalog" */
+  border-color: rgba(255, 255, 255, 0.6); /* Garis bingkai tombol tipis transparan */
 }
+
+.button.secondary:hover {
+  background: rgba(255, 255, 255, 0.15); /* Tombol sedikit menyala putih transparan saat disorot */
+  border-color: #ffffff;
+}
+
+/* ==========================================================================
+   5. BAGIAN PROMO & TENTANG (PROMO SECTION)
+   ========================================================================== */
+.promo-section, .about-section {
+  padding: 8vh 6vw; /* Jarak kosong atas-bawah dan kiri-kanan section */
+}
+
+.promo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kolom layout otomatis menyesuaikan device */
+  gap: 24px; /* Jarak jeda antar kartu promo */
+}
+
+.promo-card {
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+}
+
+/* ==========================================================================
+   6. BAGIAN KONTAK (CONTACT SECTION)
+   ========================================================================== */
+.contact-section {
+  padding: 8vh 6vw;
+  background: var(--surface); /* Latar belakang area kontak (Putih) */
+  border-top: 1px solid var(--line);
+}
+
+.contact-header {
+  text-align: center; /* Membuat judul kontak rata tengah */
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+.contact-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.contact-header p {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* Grid Layout Kartu Kontak Supaya Sejajar Rata Tengah */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center; /* Kunci utama membuat susunan kartu kumpul sejajar di tengah */
+}
+
+.contact-card {
+  background: var(--paper); /* Warna dasar kartu kontak */
+  padding: 32px 24px;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  text-align: center;
+  /* Mengatur transisi animasi halus untuk pergerakan posisi dan bayangan saat di-hover */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px); /* Kartu otomatis sedikit bergeser naik ke atas saat disentuh kursor */
+}
+
+/* Efek Warna Aksen Pop-Art Tebal Sesuai Pilihanmu Saat Kartu Di-hover */
+.contact-card.address:hover {
+  border-color: var(--blue-light);
+  box-shadow: 6px 6px 0 var(--blue-light); /* Bayangan tebal warna Biru Muda */
+}
+
+.contact-card.whatsapp:hover {
+  border-color: var(--mint);
+  box-shadow: 6px 6px 0 var(--mint); /* Bayangan tebal warna Hijau Muda */
+}
+
+.contact-card.hours:hover {
+  border-color: var(--sun);
+  box-shadow: 6px 6px 0 var(--sun); /* Bayangan tebal warna Kuning */
+}
+
+.contact-icon {
+  display: inline-block;
+  font-size: 2rem; /* Ukuran emoji pin, chat, dan jam di dalam kartu */
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.contact-card p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--blue-light); /* Link alamat/nomor HP berubah biru saat diarahkan kursor */
+  text-decoration: underline; /* Memberikan garis bawah penanda link aktif */
+}
+
+/* ==========================================================================
+   7. BAGIAN KAKI HALAMAN (FOOTER STYLING)
+   ========================================================================== */
+.site-footer {
+  text-align: center; /* Teks Hak Cipta rata tengah */
+  padding: 32px 6vw;
+  background: #4DA6FF; /* Warna dasar footer disamakan dengan navbar (Biru Muda) */
+  color: #ffffff; /* Warna teks hak cipta (Putih) */
+  font-size: 0.9rem;
+  font-weight: 600; /* Ketebalan teks */
+  border-top: 1px solid var(--line);
+}
+
+```
