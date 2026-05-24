@@ -1,301 +1,403 @@
 <html>
-<html lang="id">
+  <html lang="id">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Toko Kado Mama</title>
+      <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toko Kado Mama</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
-  <!-- ================================
+    <body>
+      <!-- ================================
        1. Header & Navigasi
   ================================ -->
-  <header class="site-header">
-    <a class="brand" href="#beranda" aria-label="Toko Kado Mama">
-      <span>Toko Kado Mama</span>
-    </a>
+      <header class="site-header">
+        <a class="brand" href="#beranda" aria-label="Toko Kado Mama">
+          <span>Toko Kado Mama</span>
+        </a>
 
-    <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Buka menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-    <nav class="site-nav" aria-label="Navigasi utama">
-      <a href="#beranda">Home</a>
-      <a href="#tentang">About us</a>
-      <a href="#produk-unggulan">Katalog Produk</a>
-      <a href="#promo">Promo</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
-  </header>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="#beranda">Home</a>
+          <a href="#produk-unggulan">Produk</a>
+          <a href="#promo">Promo</a>
+          <a href="#tentang">About</a>
+          <a href="#kontak">Kontak</a>
+        </nav>
+      </header>
 
-  <main>
-
-    <!-- ================================
+      <main>
+        <!-- ================================
          2. Hero (Beranda)
     ================================ -->
-    <section id="beranda" class="hero">
-      <div class="hero-media" role="img" aria-label="Foto Toko Kado Mama"></div>
+        <section id="beranda" class="hero">
+          <div
+            class="hero-media"
+            role="img"
+            aria-label="Foto Toko Kado Mama"
+          ></div>
 
-      <div class="hero-content">
-        <h1>Toko Kado Mama</h1>
+          <div class="hero-content">
+            <h1>Toko Kado Mama</h1>
 
-        <p class="hero-copy">
-          Mainan edukatif, kreatif, dan aman untuk menemani anak belajar lewat
-          rasa ingin tahu.
-        </p>
+            <p class="hero-copy">
+              Mainan edukatif, kreatif, dan aman untuk menemani anak belajar
+              lewat rasa ingin tahu.
+            </p>
 
-        <div class="hero-actions">
-          <a class="button secondary" href="#produk-unggulan">Lihat Katalog</a>
-        </div>
-      </div>
-    </section>
+            <div class="hero-actions">
+              <a class="button secondary" href="#produk-unggulan"
+                >Lihat Katalog</a
+              >
+            </div>
+          </div>
+        </section>
 
-
-    <!-- ================================
+        <!-- ================================
          3. Produk Unggulan
     ================================ -->
-    <section id="produk-unggulan" class="product-section">
-      <div class="product-header">
-        <h2>Produk Unggulan Kami</h2>
-        <p>Pilihan mainan terbaik untuk mendukung kreativitas, logika, dan perkembangan motorik si kecil.</p>
-      </div>
+        <section id="produk-unggulan" class="product-section">
+          <div class="product-header">
+            <h2>Produk Unggulan Kami</h2>
+            <p>
+              Pilihan mainan terbaik untuk mendukung kreativitas, logika, dan
+              perkembangan motorik si kecil.
+            </p>
+          </div>
 
-      <div class="product-grid">
+          <div class="product-grid">
+            <!-- Card 1: Jeep RC -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="images/jeep.jpeg" alt="Jeep RC" class="product-img" />
+              </div>
+              <div class="product-info">
+                <h3>Jeep RC</h3>
+                <p>
+                  Siap trabas rintangan dengan RC Climbing Cart dari Kapten
+                  Toys! Desain kokoh ala mobil offroad dengan suspensi tangguh
+                  dan ban karet bermotif deep tread yang siap melibas medan
+                  kasar. Sangat cocok untuk melatih ketangkasan dan motorik
+                  anak.
+                </p>
+                <span class="product-price">Rp 145.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Jeep%20RC"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 1: Jeep RC -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/jeep.jpeg" alt="Jeep RC" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Jeep RC</h3>
-            <p>Siap trabas rintangan dengan RC Climbing Cart dari Kapten Toys!
-              Desain kokoh ala mobil offroad dengan suspensi tangguh dan ban karet bermotif deep tread yang siap melibas
-              medan kasar. Sangat cocok untuk melatih ketangkasan dan motorik anak.</p>
-            <span class="product-price">Rp 145.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Jeep%20RC"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 2: Mobil Polisi -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/polisi.jpeg"
+                  alt="Mobil Polisi"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Mobil Polisi</h3>
+                <p>
+                  Latih imajinasi dan ketangkasan anak dengan Mobil RC Polisi
+                  yang keren ini! Didesain menyerupai mobil patroli polisi
+                  sungguhan dengan bodi yang sporty dan tangguh. Sangat cocok
+                  untuk hadiah ulang tahun atau pelengkap koleksi mainan anak.
+                </p>
+                <span class="product-price">Rp 55.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Mobil%20Polisi"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 2: Mobil Polisi -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/polisi.jpeg" alt="Mobil Polisi" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Mobil Polisi</h3>
-            <p>Latih imajinasi dan ketangkasan anak dengan Mobil RC Polisi yang keren ini!
-              Didesain menyerupai mobil patroli polisi sungguhan dengan bodi yang sporty dan tangguh.
-              Sangat cocok untuk hadiah ulang tahun atau pelengkap koleksi mainan anak.</p>
-            <span class="product-price">Rp 55.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Mobil%20Polisi"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 3: Dokter Set -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/dokter_set.jpeg"
+                  alt="Dokter Set"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Dokter Set</h3>
+                <p>
+                  Ajak si kecil bermain peran menjadi dokter kecil yang cerdas
+                  dengan set mainan medis ini! Dilengkapi dengan kotak
+                  penyimpanan (box) yang praktis, mainan ini membantu melatih
+                  kreativitas, empati, serta merapikan mainan sendiri setelah
+                  selesai digunakan.
+                </p>
+                <span class="product-price">Rp 45.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Dokter%20Set"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 3: Dokter Set -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/dokter_set.jpeg" alt="Dokter Set" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Dokter Set</h3>
-            <p>Ajak si kecil bermain peran menjadi dokter kecil yang cerdas dengan set mainan medis ini!
-              Dilengkapi dengan kotak penyimpanan (box) yang praktis, mainan ini membantu melatih kreativitas, empati,
-              serta merapikan mainan sendiri setelah selesai digunakan.</p>
-            <span class="product-price">Rp 45.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Dokter%20Set"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 4: Truk Derek -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/truk_derek.jpeg"
+                  alt="Truk Derek"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Truk Derek</h3>
+                <p>
+                  Mobil Mogok? Tenang, Truk Derek Siap Meluncur! Bawa keseruan
+                  aksi penyelamatan jalan raya ke rumah Anda! Mainan truk derek
+                  mekanis ini dirancang seru untuk memicu daya imajinasi,
+                  kreativitas, dan koordinasi motorik si kecil saat bermain
+                  peran.
+                </p>
+                <span class="product-price">Rp 35.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Truk%20Derek"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 4: Truk Derek -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/truk_derek.jpeg" alt="Truk Derek" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Truk Derek</h3>
-            <p>Mobil Mogok? Tenang, Truk Derek Siap Meluncur!
-              Bawa keseruan aksi penyelamatan jalan raya ke rumah Anda!
-              Mainan truk derek mekanis ini dirancang seru untuk memicu daya imajinasi, kreativitas, dan koordinasi
-              motorik si kecil saat bermain peran.</p>
-            <span class="product-price">Rp 35.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Truk%20Derek"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 5: Jumping Animal -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/jumping_animal.jpeg"
+                  alt="Jumping Animal"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Jumping Animal</h3>
+                <p>
+                  Teman Lompat yang Seru untuk Si Kecil yang Aktif! Salurkan
+                  energi ceria si kecil dengan mainan hewan tunggang karet yang
+                  menggemaskan ini! Dirancang khusus untuk memicu keseimbangan
+                  tubuh, melatih otot kaki, dan koordinasi motorik anak lewat
+                  cara yang super seru.
+                </p>
+                <span class="product-price">Rp 120.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Jumping%20Animal"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 5: Jumping Animal -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/jumping_animal.jpeg" alt="Jumping Animal" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Jumping Animal</h3>
-            <p>Teman Lompat yang Seru untuk Si Kecil yang Aktif!
-              Salurkan energi ceria si kecil dengan mainan hewan tunggang karet yang menggemaskan ini!
-              Dirancang khusus untuk memicu keseimbangan tubuh, melatih otot kaki, dan koordinasi motorik anak lewat
-              cara yang super seru.</p>
-            <span class="product-price">Rp 120.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Jumping%20Animal"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 6: Bebek Mancing   -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/bebek_mancing.jpeg"
+                  alt="Bebek mancing"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Bebek Mancing</h3>
+                <p>
+                  Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen
+                  sains yang aman dan edukatif! Berisi berbagai percobaan seru
+                  yang dapat melatih logika berpikir, rasa ingin tahu, serta
+                  pemahaman dasar sains dengan cara yang interaktif dan
+                  menyenangkan.
+                </p>
+                <span class="product-price">Rp 75.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20Bebek%20Mancing"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 6:  -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/science-kit.jpg" alt="Science Kit" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Bebek mancing</h3>
-            <p>Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen sains yang aman dan edukatif! 
-              Berisi berbagai percobaan seru yang dapat melatih logika berpikir, rasa ingin tahu, serta 
-              pemahaman dasar sains dengan cara yang interaktif dan menyenangkan.</p>
-            <span class="product-price">Rp 120.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 7: senapa -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/senapan.jpeg"
+                  alt="Senapan"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Senapan</h3>
+                <p>
+                 Senapan Mainan Seru untuk Petualangan Si Kecil! Hadir dengan desain menarik dan peluru busa ringan, mainan ini cocok untuk menemani waktu bermain anak menjadi lebih aktif dan menyenangkan. Membantu melatih koordinasi tangan dan mata, fokus, serta imajinasi melalui permainan penuh aksi yang seru. Cocok dimainkan bersama teman atau keluarga untuk menciptakan momen bermain yang lebih interaktif dan penuh keseruan.
+                </p>
+                <span class="product-price">Rp 75.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20Senapan"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 6:  -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/science-kit.jpg" alt="Science Kit" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Bebek mancing</h3>
-            <p>Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen sains yang aman dan edukatif! 
-              Berisi berbagai percobaan seru yang dapat melatih logika berpikir, rasa ingin tahu, serta 
-              pemahaman dasar sains dengan cara yang interaktif dan menyenangkan.</p>
-            <span class="product-price">Rp 120.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 6:  -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/science-kit.jpg"
+                  alt="Science Kit"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Bebek mancing</h3>
+                <p>
+                  Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen
+                  sains yang aman dan edukatif! Berisi berbagai percobaan seru
+                  yang dapat melatih logika berpikir, rasa ingin tahu, serta
+                  pemahaman dasar sains dengan cara yang interaktif dan
+                  menyenangkan.
+                </p>
+                <span class="product-price">Rp 120.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 6:  -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/science-kit.jpg" alt="Science Kit" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Bebek mancing</h3>
-            <p>Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen sains yang aman dan edukatif! 
-              Berisi berbagai percobaan seru yang dapat melatih logika berpikir, rasa ingin tahu, serta 
-              pemahaman dasar sains dengan cara yang interaktif dan menyenangkan.</p>
-            <span class="product-price">Rp 120.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+            <!-- Card 6:  -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="images/science-kit.jpg"
+                  alt="Science Kit"
+                  class="product-img"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Bebek mancing</h3>
+                <p>
+                  Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen
+                  sains yang aman dan edukatif! Berisi berbagai percobaan seru
+                  yang dapat melatih logika berpikir, rasa ingin tahu, serta
+                  pemahaman dasar sains dengan cara yang interaktif dan
+                  menyenangkan.
+                </p>
+                <span class="product-price">Rp 120.000</span>
+                <a
+                  href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
+                  target="_blank"
+                  class="product-button"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
 
-        <!-- Card 6:  -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/science-kit.jpg" alt="Science Kit" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Bebek mancing</h3>
-            <p>Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen sains yang aman dan edukatif! 
-              Berisi berbagai percobaan seru yang dapat melatih logika berpikir, rasa ingin tahu, serta 
-              pemahaman dasar sains dengan cara yang interaktif dan menyenangkan.</p>
-            <span class="product-price">Rp 120.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
+           
+        </section>
 
-        <!-- Card 6:  -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="images/science-kit.jpg" alt="Science Kit" class="product-img">
-          </div>
-          <div class="product-info">
-            <h3>Bebek mancing</h3>
-            <p>Tumbuhkan jiwa ilmuwan cilik si kecil dengan paket eksperimen sains yang aman dan edukatif! 
-              Berisi berbagai percobaan seru yang dapat melatih logika berpikir, rasa ingin tahu, serta 
-              pemahaman dasar sains dengan cara yang interaktif dan menyenangkan.</p>
-            <span class="product-price">Rp 120.000</span>
-            <a href="https://wa.me/6281284319171?text=Halo%20Toko%20Kado%20Mama,%20saya%20tertarik%20dengan%20Science%20Kit%20Eksperimen%20Cilik"
-              target="_blank" class="button primary small">Pesan Sekarang</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ================================
+        <!-- ================================
          4. Promo
          TODO: section belum dibuat
     ================================ -->
-    <section id="promo" class="promo-section">
-    </section>
+        <section id="promo" class="promo-section"></section>
 
-
-    <!-- ================================
+        <!-- ================================
          5. Tentang Toko
     ================================ -->
-    <section id="tentang" class="about-section">
-      <h2>Tentang Toko Kado Mama</h2>
-      <p>
-        Berdiri sejak tahun 2013, Toko Kado Mama berkomitmen menyediakan pusat
-        mainan eceran yang edukatif, kreatif, dan aman untuk anak-anak. Kami
-        percaya bahwa belajar paling efektif adalah melalui bermain dan rasa ingin tahu.
-      </p>
-    </section>
+        <section id="tentang" class="about-section">
+          <h2>Tentang Toko Kado Mama</h2>
+          <p>
+            Berdiri sejak tahun 2013, Toko Kado Mama berkomitmen menyediakan
+            pusat mainan eceran yang edukatif, kreatif, dan aman untuk
+            anak-anak. Kami percaya bahwa belajar paling efektif adalah melalui
+            bermain dan rasa ingin tahu.
+          </p>
+        </section>
 
-
-    <!-- ================================
+        <!-- ================================
          6. Kontak
     ================================ -->
-    <section id="kontak" class="contact-section">
-      <div class="contact-header">
-        <h2>Hubungi Kami</h2>
-        <p>Punya pertanyaan atau ingin memesan langsung? Silakan hubungi kami melalui:</p>
-      </div>
+        <section id="kontak" class="contact-section">
+          <div class="contact-header">
+            <h2>Hubungi Kami</h2>
+            <p>
+              Punya pertanyaan atau ingin memesan langsung? Silakan hubungi kami
+              melalui:
+            </p>
+          </div>
 
-      <div class="contact-grid">
-        <div class="contact-card address">
-          <span class="contact-icon">📍</span>
-          <h3>Alamat</h3>
-          <p><a href="https://maps.app.goo.gl/E6sVrRvzsPZavSBq9?g_st=aw" target="_blank" class="link">Km Pusat Mainan,
-              Jatisari, Kec. Jatiasih, Kota Bks, Jawa Barat</a></p>
-        </div>
+          <div class="contact-grid">
+            <div class="contact-card address">
+              <span class="contact-icon">📍</span>
+              <h3>Alamat</h3>
+              <p>
+                <a
+                  href="https://maps.app.goo.gl/E6sVrRvzsPZavSBq9?g_st=aw"
+                  target="_blank"
+                  class="link"
+                  >Km Pusat Mainan, Jatisari, Kec. Jatiasih, Kota Bks, Jawa
+                  Barat</a
+                >
+              </p>
+            </div>
 
-        <div class="contact-card hours">
-          <span class="contact-icon">⏰</span>
-          <h3>Jam Operasional</h3>
-          <p>Everyday (08.00 - 17.00 WIB)</p>
-        </div>
+            <div class="contact-card hours">
+              <span class="contact-icon">⏰</span>
+              <h3>Jam Operasional</h3>
+              <p>Everyday (08.00 - 17.00 WIB)</p>
+            </div>
 
-        <div class="contact-card whatsapp">
-          <span class="contact-icon">💬</span>
-          <h3>WhatsApp</h3>
-          <p><a href="https://wa.me/6281284319171" target="_blank" class="link">0812-8431-9171</a></p>
-        </div>
-      </div>
-    </section>
+            <div class="contact-card whatsapp">
+              <span class="contact-icon">💬</span>
+              <h3>WhatsApp</h3>
+              <p>
+                <a
+                  href="https://wa.me/6281284319171"
+                  target="_blank"
+                  class="link"
+                  >0812-8431-9171</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
 
-  </main>
-
-
-  <!-- ================================
+      <!-- ================================
        7. Footer
   ================================ -->
-  <footer class="site-footer">
-    <p>&copy; 2026 Toko Kado Mama. Semua Hak Cipta Dilindungi.</p>
-  </footer>
+      <footer class="site-footer">
+        <p>&copy; 2026 Toko Kado Mama. Semua Hak Cipta Dilindungi.</p>
+      </footer>
 
-  <script src="script.js"></script>
-</body>
-
+      <script src="script.js"></script>
+    </body>
+  </html>
 </html>

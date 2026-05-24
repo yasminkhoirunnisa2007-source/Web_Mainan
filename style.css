@@ -3,14 +3,26 @@
      1. VARIABEL WARNA (CSS VARIABLES)
      Berfungsi menyimpan warna agar bisa dipanggil berulang kali di baris bawah.
      ========================================================================== */
-  --blue-light: #4DA6FF;   /* Biru Muda (Warna utama navbar & footer) */
-  --sun: #FFD93D;          /* Kuning (Warna tulisan hero & aksen hover kartu jam) */
-  --mint: #6BCB77;         /* Hijau Muda (Warna aksen hover kartu WhatsApp) */
-  --ink: #1C2A38;          /* Navy Gelap (Digunakan untuk warna teks utama) */
-  --muted: #566573;        /* Abu-abu/Navy pudar (Untuk teks sub-judul/keterangan) */
-  --paper: #F4F9FF;        /* Biru super muda (Untuk background dasar halaman web) */
-  --surface: #ffffff;      /* Putih bersih (Untuk background section/kartu tertentu) */
-  --line: #D4E6F1;         /* Garis pembatas tipis antar bagian web */
+  --blue-light: #4da6ff; /* Biru Muda (Warna utama navbar & footer) */
+  --sun: #ffd93d; /* Kuning (Warna tulisan hero & aksen hover kartu jam) */
+  --mint: #6bcb77; /* Hijau Muda (Warna aksen hover kartu WhatsApp) */
+  --ink: #1c2a38; /* Navy Gelap (Digunakan untuk warna teks utama) */
+  --muted: #566573; /* Abu-abu/Navy pudar (Untuk teks sub-judul/keterangan) */
+  --paper: #f4f9ff; /* Biru super muda (Untuk background dasar halaman web) */
+  --surface: #ffffff; /* Putih bersih (Untuk background section/kartu tertentu) */
+  --line: #d4e6f1; /* Garis pembatas tipis antar bagian web */
+}
+
+section {
+  scroll-margin-top: 72px;
+}
+
+#beranda,
+#produk-unggulan,
+#tentang,
+#promo,
+#kontak {
+  scroll-margin-top: 72px;
 }
 
 /* ==========================================================================
@@ -26,7 +38,12 @@ html {
 
 body {
   margin: 0; /* Menghilangkan jarak bawaan browser di tepi layar */
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; /* Jenis font web */
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif; /* Jenis font web */
   color: var(--ink); /* Warna teks default seluruh halaman */
   background: var(--paper); /* Warna background default seluruh halaman */
   line-height: 1.6; /* Mengatur jarak spasi antar baris kalimat teks */
@@ -49,9 +66,11 @@ a {
   justify-content: space-between; /* Mendorong logo ke kiri ujung dan teks menu ke kanan ujung */
   min-height: 72px; /* Tinggi minimal dari bar navbar */
   padding: 0 6vw; /* Jarak pas dalam di kiri dan kanan navbar */
-  background: #4DA6FF; /* Warna dasar navbar (Biru Muda) */
+  background: #4da6ff; /* Warna dasar navbar (Biru Muda) */
   border-bottom: 1px solid var(--line); /* Garis pembatas tipis di bawah navbar */
-  backdrop-filter: blur(16px); /* Efek blur halus jika ada komponen di belakangnya */
+  backdrop-filter: blur(
+    16px
+  ); /* Efek blur halus jika ada komponen di belakangnya */
 }
 
 .brand {
@@ -111,32 +130,46 @@ a {
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: calc(65vh - 72px); /* Mengatur tinggi banner proporsional (65% layar) agar tidak terlalu besar */
-  display: grid;
-  align-items: end; /* Membuat konten teks di dalamnya merapat ke bagian bawah banner */
+
+  min-height: calc(100vh - 72px);
+
+  display: flex;
+  align-items: flex-end;
+
   overflow: hidden;
-  background: #4DA6FF;
+
+  background: #4da6ff;
 }
 
 .hero-media {
   position: absolute;
-  inset: 0; /* Membuka gambar penuh menutupi area hero background */
-  /* Efek gradien gelap dari kiri ke kanan dikombinasikan dengan pemanggilan gambar fototoko.jpeg */
+  inset: 0;
+
   background:
     linear-gradient(
       90deg,
-      rgba(21, 43, 70, 0.8) 0%,   /* Sisi kiri agak gelap agar teks terbaca tajam */
-      rgba(21, 43, 70, 0.5) 50%,
-      rgba(21, 43, 70, 0.1) 100%  /* Sisi kanan transparan agar gambar asli toko terlihat jelas */
+      rgba(21, 43, 70, 0.78) 0%,
+      rgba(21, 43, 70, 0.45) 45%,
+      rgba(21, 43, 70, 0.12) 100%
     ),
-    url("images/fototoko.jpeg") center / cover; /* Gambar otomatis otomatis memenuhi ruang */
+    url("images/fototoko.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
   position: relative;
-  width: min(760px, 88vw); /* Batas lebar teks agar tidak melar terlalu panjang ke kanan */
-  margin: 0 0 7vh 6vw; /* Jarak penempatan teks dari tepi bawah dan kiri banner */
+
+  width: min(760px, 88vw);
+
+  margin-left: 6vw;
+  margin-bottom: 8vh;
+
   color: #ffffff;
+
+  z-index: 2;
 }
 
 .eyebrow {
@@ -150,14 +183,23 @@ a {
 h1 {
   margin-bottom: 16px;
   color: var(--sun); /* Mengubah Judul Utama "Toko Kado Mama" menjadi Kuning */
-  font-size: clamp(3.2rem, 9vw, 7.6rem); /* Ukuran teks otomatis membesar/mengecil sesuai lebar device */
+  font-size: clamp(
+    3.2rem,
+    9vw,
+    7.6rem
+  ); /* Ukuran teks otomatis membesar/mengecil sesuai lebar device */
   line-height: 0.92;
 }
 
 .hero-copy {
   max-width: 620px;
   margin-bottom: 28px;
-  color: rgba(255, 217, 61, 0.9); /* Mengubah teks deskripsi di bawah judul menjadi Kuning lembut */
+  color: rgba(
+    255,
+    217,
+    61,
+    0.9
+  ); /* Mengubah teks deskripsi di bawah judul menjadi Kuning lembut */
   font-size: clamp(1.05rem, 2vw, 1.35rem);
 }
 
@@ -182,24 +224,38 @@ h1 {
 
 .button.secondary {
   color: #ffffff; /* Warna teks tombol "Lihat Katalog" */
-  border-color: rgba(255, 255, 255, 0.6); /* Garis bingkai tombol tipis transparan */
+  border-color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Garis bingkai tombol tipis transparan */
 }
 
 .button.secondary:hover {
-  background: rgba(255, 255, 255, 0.15); /* Tombol sedikit menyala putih transparan saat disorot */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Tombol sedikit menyala putih transparan saat disorot */
   border-color: #ffffff;
 }
 
 /* ==========================================================================
    5. BAGIAN PROMO & TENTANG (PROMO SECTION)
    ========================================================================== */
-.promo-section, .about-section {
+.promo-section,
+.about-section {
   padding: 8vh 6vw; /* Jarak kosong atas-bawah dan kiri-kanan section */
 }
 
 .promo-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kolom layout otomatis menyesuaikan device */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Kolom layout otomatis menyesuaikan device */
   gap: 24px; /* Jarak jeda antar kartu promo */
 }
 
@@ -254,11 +310,16 @@ h1 {
   border: 2px solid var(--line);
   text-align: center;
   /* Mengatur transisi animasi halus untuk pergerakan posisi dan bayangan saat di-hover */
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-4px); /* Kartu otomatis sedikit bergeser naik ke atas saat disentuh kursor */
+  transform: translateY(
+    -4px
+  ); /* Kartu otomatis sedikit bergeser naik ke atas saat disentuh kursor */
 }
 
 /* Efek Warna Aksen Pop-Art Tebal Sesuai Pilihanmu Saat Kartu Di-hover */
@@ -303,7 +364,9 @@ h1 {
 }
 
 .link:hover {
-  color: var(--blue-light); /* Link alamat/nomor HP berubah biru saat diarahkan kursor */
+  color: var(
+    --blue-light
+  ); /* Link alamat/nomor HP berubah biru saat diarahkan kursor */
   text-decoration: underline; /* Memberikan garis bawah penanda link aktif */
 }
 
@@ -313,107 +376,189 @@ h1 {
 .site-footer {
   text-align: center; /* Teks Hak Cipta rata tengah */
   padding: 32px 6vw;
-  background: #4DA6FF; /* Warna dasar footer disamakan dengan navbar (Biru Muda) */
+  background: #4da6ff; /* Warna dasar footer disamakan dengan navbar (Biru Muda) */
   color: #ffffff; /* Warna teks hak cipta (Putih) */
   font-size: 0.9rem;
   font-weight: 600; /* Ketebalan teks */
   border-top: 1px solid var(--line);
 }
 
-/* Container Utama Grid Produk */
+/* ==========================================================================
+   PRODUK UNGGULAN
+========================================================================== */
+
+.product-section {
+  padding: 8vh 6vw;
+}
+
+.product-header {
+  text-align: center;
+  max-width: 760px;
+
+  margin: 0 auto 48px auto;
+}
+
+.product-header h2 {
+  margin-bottom: 12px;
+
+  font-size: 2.3rem;
+  font-weight: 800;
+
+  color: var(--ink);
+}
+
+.product-header p {
+  color: var(--muted);
+
+  font-size: 1.05rem;
+}
+
+/* GRID */
+
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Membagi menjadi 3 kolom sejajar sama rata */
-  gap: 25px; /* Jarak antar kartu mainan */
-  padding: 20px;
-  max-width: 1200px;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 28px;
+
+  max-width: 1300px;
+
   margin: 0 auto;
 }
 
-/* Individual Product Card */
+/* CARD */
+
 .product-card {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  overflow: hidden;
   display: flex;
-  flex-direction: column; /* Menyusun konten dari atas ke bawah */
-  height: 100%; /* Memaksa semua kartu tingginya sama rata */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: var(--surface);
+
+  border: 2px solid var(--line);
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-5px); /* Efek sedikit terangkat saat di-hover */
+  transform: translateY(-6px);
+
+  border-color: var(--blue-light);
+
+  box-shadow: 6px 6px 0 rgba(77, 166, 255, 0.2);
 }
 
-/* Pengaturan Kotak Foto */
+/* FOTO */
+
 .product-image {
-  width: 100%;
-  height: 220px; /* Atur tinggi standar kotak foto */
+  aspect-ratio: 1 / 1;
+
   overflow: hidden;
-  background-color: #f9f9f9;
+
+  background: #eef6ff;
 }
 
 .product-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Membuat foto pas memenuhi kotak tanpa merusak rasio (tidak gepeng) */
+
+  object-fit: cover;
+
   display: block;
+
+  transition: transform 0.3s ease;
 }
 
-/* Area Informasi Produk (Teks, Harga, Tombol) */
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* INFO */
+
 .product-info {
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Membuat area teks mengisi sisa ruang kosong agar tombol berada di paling bawah */
+
+  padding: 22px;
+
+  height: 100%;
 }
 
 .product-info h3 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  color: #333;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-size: 1.2rem;
+
+  color: var(--ink);
 }
 
-.product-info p {
-  margin: 0 0 20px 0;
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-  flex-grow: 1; /* Mendorong harga dan tombol ke bawah jika teks deskripsi pendek */
-}
+.product-info {
+  display: flex;
+  flex-direction: column;
 
+  padding: 22px;
+
+  flex: 1;
+}
 .product-price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #e65100; /* Warna harga dibuat menonjol */
-  margin-bottom: 15px;
   display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  color: var(--blue-light);
 }
 
-/* Pengaturan Tombol */
-.button.primary.small {
-  display: block;
-  text-align: center;
-  padding: 10px 15px;
-  background-color: #4DA6FF; /* Menggunakan warna solid utama */
-  color: #fff;
+/* BUTTON */
+.product-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: auto;
+  background-color: var(--blue-light);
+  color: #ffffff !important;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.button.primary.small:hover {
-  background-color: #3393FF; /* Warna saat tombol disorot */
+.product-button:hover {
+  background-color: #2f95ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 12vw, 5rem);
+  }
 }
 
 /* RESPONSIVE: Otomatis menyesuaikan jika dibuka di tablet atau HP */
 @media (max-width: 992px) {
   .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Jadi 2 kolom di tablet */
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    ); /* Jadi 2 kolom di tablet */
   }
 }
 
