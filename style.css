@@ -58,6 +58,7 @@ a {
    3. MENU ATAS (NAVBAR STYLING)
    ========================================================================== */
 .site-header {
+  color: #ffffff;
   position: sticky; /* Membuat navbar tetap melayang/menempel di atas saat di-scroll */
   top: 0;
   z-index: 20; /* Memastikan posisi navbar berada di lapisan paling atas menimpa konten lain */
@@ -243,30 +244,6 @@ h1 {
 }
 
 /* ==========================================================================
-   5. BAGIAN PROMO & TENTANG (PROMO SECTION)
-   ========================================================================== */
-.promo-section,
-.about-section {
-  padding: 8vh 6vw; /* Jarak kosong atas-bawah dan kiri-kanan section */
-}
-
-.promo-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Kolom layout otomatis menyesuaikan device */
-  gap: 24px; /* Jarak jeda antar kartu promo */
-}
-
-.promo-card {
-  background: var(--surface);
-  padding: 32px;
-  border-radius: 12px;
-  border: 2px solid var(--line);
-}
-
-/* ==========================================================================
    6. BAGIAN KONTAK (CONTACT SECTION)
    ========================================================================== */
 .contact-section {
@@ -384,32 +361,30 @@ h1 {
 }
 
 /* ==========================================================================
-   PRODUK UNGGULAN
+   PRODUK SECTION
 ========================================================================== */
 
 .product-section {
-  padding: 8vh 6vw;
+  padding: 8vh 4vw;
 }
+
+/* HEADER */
 
 .product-header {
   text-align: center;
   max-width: 760px;
-
-  margin: 0 auto 48px auto;
+  margin: 0 auto 42px auto;
 }
 
 .product-header h2 {
   margin-bottom: 12px;
-
   font-size: 2.3rem;
   font-weight: 800;
-
   color: var(--ink);
 }
 
 .product-header p {
   color: var(--muted);
-
   font-size: 1.05rem;
 }
 
@@ -417,13 +392,9 @@ h1 {
 
 .product-grid {
   display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 28px;
-
-  max-width: 1300px;
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -432,13 +403,10 @@ h1 {
 .product-card {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-
   background: var(--surface);
-
   border: 2px solid var(--line);
   border-radius: 16px;
-
+  overflow: hidden;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -447,30 +415,24 @@ h1 {
 
 .product-card:hover {
   transform: translateY(-6px);
-
   border-color: var(--blue-light);
-
-  box-shadow: 6px 6px 0 rgba(77, 166, 255, 0.2);
+  box-shadow: 6px 6px 0 rgba(77, 166, 255, 0.18);
 }
 
 /* FOTO */
 
 .product-image {
+  width: 100%;
   aspect-ratio: 1 / 1;
-
   overflow: hidden;
-
   background: #eef6ff;
 }
 
 .product-img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
-
   transition: transform 0.3s ease;
 }
 
@@ -483,61 +445,105 @@ h1 {
 .product-info {
   display: flex;
   flex-direction: column;
-
-  padding: 22px;
-
-  height: 100%;
+  flex: 1;
+  padding: 15px;
 }
 
+/* JUDUL */
+
 .product-info h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-
-  font-size: 1.2rem;
-
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
   color: var(--ink);
 }
 
-.product-info {
-  display: flex;
-  flex-direction: column;
+/* DESKRIPSI */
 
-  padding: 22px;
-
-  flex: 1;
+.product-info p {
+  margin: 0 0 14px;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
+
+/* HARGA */
+
 .product-price {
   display: block;
-
-  margin-bottom: 18px;
-
-  font-size: 1.1rem;
+  margin-bottom: 14px;
+  font-size: 1rem;
   font-weight: 800;
-
   color: var(--blue-light);
 }
 
 /* BUTTON */
+
 .product-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 14px 18px;
+  height: 42px;
   margin-top: auto;
-  background-color: var(--blue-light);
+  background: var(--blue-light);
   color: #ffffff !important;
   border-radius: 10px;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
   transition:
-    background-color 0.2s ease,
+    background 0.2s ease,
     transform 0.2s ease;
 }
 
 .product-button:hover {
-  background-color: #2f95ff;
+  background: #2f95ff;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   ABOUT SECTION
+========================================================================== */
+
+.about-section {
+  padding: 8vh 6vw;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  margin-bottom: 18px;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.about-section p {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 6vh 5vw;
+  }
+
+  .about-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
 }
 
 /* ==========================================================================
@@ -546,30 +552,24 @@ h1 {
 
 .edu-section {
   padding: 8vh 6vw;
-
   background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
 }
 
 .edu-header {
   text-align: center;
-
   max-width: 700px;
-
   margin: 0 auto 50px auto;
 }
 
 .edu-header h2 {
   margin-bottom: 12px;
-
   font-size: 2.3rem;
   font-weight: 800;
-
   color: var(--ink);
 }
 
 .edu-header p {
   color: var(--muted);
-
   font-size: 1.05rem;
 }
 
@@ -577,13 +577,9 @@ h1 {
 
 .edu-grid {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
   gap: 24px;
-
   max-width: 1200px;
-
   margin: 0 auto;
 }
 
@@ -591,17 +587,11 @@ h1 {
 
 .edu-card {
   position: relative;
-
   padding: 32px;
-
   background: var(--surface);
-
   border-radius: 18px;
-
   border: 2px solid var(--line);
-
   overflow: hidden;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -610,9 +600,7 @@ h1 {
 
 .edu-card:hover {
   transform: translateY(-6px);
-
   border-color: var(--sun);
-
   box-shadow: 8px 8px 0 rgba(255, 217, 61, 0.25);
 }
 
@@ -620,20 +608,13 @@ h1 {
 
 .edu-badge {
   display: inline-block;
-
   margin-bottom: 18px;
-
   padding: 6px 14px;
-
   background: var(--sun);
-
   color: var(--ink);
-
   border-radius: 999px;
-
   font-size: 0.75rem;
   font-weight: 900;
-
   letter-spacing: 0.5px;
 }
 
@@ -642,17 +623,13 @@ h1 {
 .edu-card h3 {
   margin-top: 0;
   margin-bottom: 12px;
-
   font-size: 1.4rem;
-
   color: var(--ink);
 }
 
 .edu-card p {
   margin-bottom: 24px;
-
   color: var(--muted);
-
   line-height: 1.7;
 }
 
@@ -660,21 +637,14 @@ h1 {
 
 .edu-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   padding: 12px 20px;
-
   background: var(--blue-light);
-
   color: #ffffff;
-
   border-radius: 10px;
-
   font-size: 0.95rem;
   font-weight: 800;
-
   transition:
     background 0.2s ease,
     transform 0.2s ease;
@@ -682,15 +652,49 @@ h1 {
 
 .edu-button:hover {
   background: #2f95ff;
-
   transform: translateY(-2px);
 }
 
-/* RESPONSIVE */
+/* ==========================================================================
+RESPONSIVE
+========================================================================== */
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* HP */
 
 @media (max-width: 768px) {
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .product-info p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .product-price {
+    font-size: 0.92rem;
+  }
+
+  .product-button {
+    height: 38px;
+    font-size: 0.78rem;
   }
 
   h1 {
@@ -698,20 +702,14 @@ h1 {
   }
 }
 
-/* RESPONSIVE: Otomatis menyesuaikan jika dibuka di tablet atau HP */
-@media (max-width: 992px) {
-  .product-grid {
-    grid-template-columns: repeat(
-      2,
-      minmax(0, 1fr)
-    ); /* Jadi 2 kolom di tablet */
-  }
-}
+/* HP KECIL */
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .product-grid {
-    grid-template-columns: minmax(0, 1fr); /* Jadi 1 kolom penuh di HP */
-    gap: 15px;
-    padding: 10px;
+    gap: 12px;
+  }
+
+  .product-info p {
+    font-size: 0.74rem;
   }
 }
