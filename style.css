@@ -540,6 +540,152 @@ h1 {
   background-color: #2f95ff;
 }
 
+/* ==========================================================================
+   PROMO SECTION
+========================================================================== */
+
+.promo-section {
+  padding: 8vh 6vw;
+
+  background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
+}
+
+.promo-header {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 50px auto;
+}
+
+.promo-header h2 {
+  margin-bottom: 12px;
+
+  font-size: 2.3rem;
+  font-weight: 800;
+
+  color: var(--ink);
+}
+
+.promo-header p {
+  color: var(--muted);
+
+  font-size: 1.05rem;
+}
+
+/* GRID */
+
+.promo-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 24px;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* CARD */
+
+.promo-card {
+  position: relative;
+
+  padding: 32px;
+
+  background: var(--surface);
+
+  border-radius: 18px;
+
+  border: 2px solid var(--line);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--sun);
+
+  box-shadow: 8px 8px 0 rgba(255, 217, 61, 0.25);
+}
+
+/* BADGE */
+
+.promo-badge {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 6px 14px;
+
+  background: var(--sun);
+
+  color: var(--ink);
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+}
+
+/* TEXT */
+
+.promo-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-size: 1.4rem;
+
+  color: var(--ink);
+}
+
+.promo-card p {
+  margin-bottom: 24px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+/* BUTTON */
+
+.promo-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  background: var(--blue-light);
+
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.promo-button:hover {
+  background: #2f95ff;
+
+  transform: translateY(-2px);
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
