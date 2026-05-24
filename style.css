@@ -14,7 +14,13 @@
 }
 
 section {
-  scroll-margin-top: 72px;
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 #beranda,
@@ -58,28 +64,23 @@ a {
    3. MENU ATAS (NAVBAR STYLING)
    ========================================================================== */
 .site-header {
-  color: #ffffff;
-  position: sticky; /* Membuat navbar tetap melayang/menempel di atas saat di-scroll */
+  position: sticky;
   top: 0;
-  z-index: 20; /* Memastikan posisi navbar berada di lapisan paling atas menimpa konten lain */
-  display: flex; /* Mengaktifkan mode flexbox untuk mengatur posisi item di dalam */
-  align-items: center; /* Membuat isi navbar sejajar secara vertikal di tengah */
-  justify-content: space-between; /* Mendorong logo ke kiri ujung dan teks menu ke kanan ujung */
-  min-height: 72px; /* Tinggi minimal dari bar navbar */
-  padding: 0 6vw; /* Jarak pas dalam di kiri dan kanan navbar */
-  background: #4da6ff; /* Warna dasar navbar (Biru Muda) */
-  border-bottom: 1px solid var(--line); /* Garis pembatas tipis di bawah navbar */
-  backdrop-filter: blur(
-    16px
-  ); /* Efek blur halus jika ada komponen di belakangnya */
+  z-index: 999;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6vw;
+  background: rgba(77, 166, 255, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px; /* Jarak antara kotak logo mini dan tulisan "Toko Kado Mama" */
-  font-weight: 800; /* Menebalkan teks nama toko */
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
 }
 
 .brand-mark {
@@ -96,34 +97,41 @@ a {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 28px; /* Jarak antar teks menu (Produk, Tentang, Kontak) */
-  color: #ffffff; /* Mengubah warna teks menu navbar menjadi putih */
-  font-weight: 700;
+  gap: 28px;
 }
 
 .site-nav a {
-  transition: color 0.2s ease; /* Efek transisi halus perubahan warna saat disentuh kursor */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
 }
 
 .site-nav a:hover {
-  color: var(--sun); /* Teks menu berubah menjadi Kuning saat kursor menempel */
+  color: var(--sun);
 }
 
+/* HAMBURGER */
+
 .nav-toggle {
-  display: none; /* Disembunyikan (Akan muncul nanti lewat media query untuk mode HP) */
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--surface);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
 }
 
 .nav-toggle span {
-  display: block;
-  width: 18px;
+  width: 22px;
   height: 2px;
-  margin: 4px auto;
-  background: var(--ink); /* Garis strip tiga untuk menu mobile */
+  background: #ffffff;
+  margin: 0 auto;
+  border-radius: 99px;
 }
 
 /* ==========================================================================
@@ -392,8 +400,8 @@ h1 {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -667,39 +675,7 @@ RESPONSIVE
   }
 }
 
-/* HP */
-
 @media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .product-info {
-    padding: 12px;
-  }
-
-  .product-info h3 {
-    font-size: 0.95rem;
-  }
-
-  .product-info p {
-    font-size: 0.78rem;
-    line-height: 1.5;
-  }
-
-  .product-price {
-    font-size: 0.92rem;
-  }
-
-  .product-button {
-    height: 38px;
-    font-size: 0.78rem;
-  }
-
-  h1 {
-    font-size: clamp(2.8rem, 12vw, 5rem);
-  }
 }
 
 /* HP KECIL */
@@ -711,5 +687,134 @@ RESPONSIVE
 
   .product-info p {
     font-size: 0.74rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #4da6ff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 6vw;
+    gap: 18px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.25s ease;
+  }
+
+  .site-nav.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+  }
+
+  .hero {
+    min-height: 88vh;
+    align-items: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
+    padding: 0 6vw;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 13vw, 4.5rem);
+    line-height: 1;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .product-card {
+    border-radius: 14px;
+  }
+
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 0.92rem;
+    min-height: auto;
+  }
+
+  .product-info p {
+    font-size: 0.74rem;
+    line-height: 1.45;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+  }
+
+  .product-price {
+    font-size: 0.92rem;
+  }
+
+  .product-button {
+    height: 38px;
+    font-size: 0.76rem;
+  }
+
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card {
+    padding: 24px;
+  }
+
+  .edu-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .edu-card p {
+    font-size: 0.92rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 24px;
+  }
+
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-header p {
+    font-size: 0.95rem;
   }
 }
