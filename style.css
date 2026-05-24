@@ -541,16 +541,16 @@ h1 {
 }
 
 /* ==========================================================================
-   PROMO SECTION
+   Edukasi SECTION
 ========================================================================== */
 
-.promo-section {
+.edu-section {
   padding: 8vh 6vw;
 
   background: linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
 }
 
-.promo-header {
+.edu-header {
   text-align: center;
 
   max-width: 700px;
@@ -558,7 +558,7 @@ h1 {
   margin: 0 auto 50px auto;
 }
 
-.promo-header h2 {
+.edu-header h2 {
   margin-bottom: 12px;
 
   font-size: 2.3rem;
@@ -567,7 +567,7 @@ h1 {
   color: var(--ink);
 }
 
-.promo-header p {
+.edu-header p {
   color: var(--muted);
 
   font-size: 1.05rem;
@@ -575,7 +575,7 @@ h1 {
 
 /* GRID */
 
-.promo-grid {
+.edu-grid {
   display: grid;
 
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -589,7 +589,7 @@ h1 {
 
 /* CARD */
 
-.promo-card {
+.edu-card {
   position: relative;
 
   padding: 32px;
@@ -608,7 +608,7 @@ h1 {
     border-color 0.25s ease;
 }
 
-.promo-card:hover {
+.edu-card:hover {
   transform: translateY(-6px);
 
   border-color: var(--sun);
@@ -618,7 +618,7 @@ h1 {
 
 /* BADGE */
 
-.promo-badge {
+.edu-badge {
   display: inline-block;
 
   margin-bottom: 18px;
@@ -639,7 +639,7 @@ h1 {
 
 /* TEXT */
 
-.promo-card h3 {
+.edu-card h3 {
   margin-top: 0;
   margin-bottom: 12px;
 
@@ -648,7 +648,7 @@ h1 {
   color: var(--ink);
 }
 
-.promo-card p {
+.edu-card p {
   margin-bottom: 24px;
 
   color: var(--muted);
@@ -658,7 +658,7 @@ h1 {
 
 /* BUTTON */
 
-.promo-button {
+.edu-button {
   display: inline-flex;
 
   align-items: center;
@@ -680,7 +680,7 @@ h1 {
     transform 0.2s ease;
 }
 
-.promo-button:hover {
+.edu-button:hover {
   background: #2f95ff;
 
   transform: translateY(-2px);
